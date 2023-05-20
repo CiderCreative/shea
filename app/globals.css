@@ -1,27 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap');
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  font-family: garamond, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: #F87666; /* WebKit/Blink Browsers */
+}
+
+::-moz-selection {
+  background: #F87666; /* Gecko Browsers */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.yeseva{
+  font-family: 'Yeseva One', cursive;
+}
+
+.garamond{
+  font-family: 'EB Garamond', serif;
+}
+
+.red-button-gradient{
+  background: linear-gradient(125.04deg, #F87666 29.39%, #BA1F0C 207.97%);
+}
+
+.home-gradient{
+  background: linear-gradient(170.69deg, #FCDCB8 7.04%, #AD5F06 170.42%);
+}
+
+.solos-gradient{
+  background: linear-gradient(171.62deg, #ECE2D0 6.42%, #6D2E46 135.2%);
+}
+
+.family-gradient{
+  background: linear-gradient(178.03deg, #BD897E 1.67%, #FAC697 142.43%);
+}
+
+.business-gradient{
+  background: linear-gradient(170.68deg, #BD897E 0%, #000000 212.67%);
+}
+
+.aboutme-gradient{
+  background: linear-gradient(171.62deg, #E08D79 6.42%, #FEE2C0 135.2%);
 }

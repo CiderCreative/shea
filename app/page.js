@@ -1,113 +1,100 @@
-import Image from 'next/image'
+"use client"
 
-export default function Home() {
+import './globals.css'
+import { Slideshow } from "../components"
+import hands from '../constants/vertImgs/hands.jpg';
+import milk from '../constants/horizImgs/milk.jpg';
+import Image from 'next/image';
+
+
+const Home = () => {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.js</code>
+    <div className="pt-[80px] home-gradient aspect-video">
+
+    {/* Hero for Big screens*/}
+    <div className="hidden md:block max-w-full overflow-hidden">
+      <div className="relative w-4/5 left-[50vw] top-20 pb-40">
+        <Slideshow context={require.context(`../constants/homeImgs/`, false, /\.(png|jpe?g|svg)$/)}/>
+      </div>
+      <div className="absolute top-[240px] left-[6vw] xl:top-[400px] xl:left-[20vw] text-black yeseva">
+        <p className="text-[70px]">Take photos!</p>
+        <p className="text-[35px] pb-10">They last a lifetime.</p>
+        <a href="https://calendly.com/shealynphoto" target="_blank" rel="noreferrer">
+          <button type="button" className="text-md text-white px-7 py-4 drop-shadow-md md:text-2xl flex-nowrap rounded-lg red-button-gradient active:translate-y-1">Book a Shoot!</button>
+        </a>
+      </div>
+    </div>
+
+    {/* Hero section for Small screens */}
+    <div className="md:hidden">
+      <div className="relative top-10 pb-[10vh]">
+        <Slideshow />
+      </div>
+      <div className="relative text-center text-black yeseva pb-10">
+        <p className="text-3xl sm:text-5xl sm:mt-[-20px]">Take photos!</p>
+        <p className="text-xl sm:text-2xl py-5">They last a lifetime.</p>
+        <a href="https://calendly.com/shealynphoto" target="_blank" rel="noreferrer">
+          <button
+            type="button" className="text-white px-7 py-4 drop-shadow-md rounded-lg red-button-gradient active:translate-y-1">Book a Shoot!</button>
+        </a>
+      </div>
+    </div>
+
+
+    {/* Big Screen home screen (all absolute positioning) */}
+    <div className="hidden md:block mt-50">
+      <div className="bg-[#362417] text-white w-1/2 pt-5 ml-10">
+        <h3 className="yeseva text-4xl pl-4 text-center">"Beyond the Frame"</h3>
+        <p className="garamond text-2xl p-10">
+          "Beyond the Frame" is my photography philosophy that goes beyond just capturing images.
+          It's about capturing the essence of the moment and telling that story through photographs.
+          It's about creating a connection with the moment and delivering photos that evoke emotions.
         </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
       </div>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
+      <p className="text-black w-[40vw] text-2xl garamond xl:w-[30vw] relative left-20 xl:left-40 top-[15vh]">
+        Attention to detail is critical in creating exceptional images that tell a story. I focus
+        on every aspect of a scene, from lighting to composition, resulting in a lasting memory
+        for clients. I'm a photographer who prioritizes the details to elevate images from good to
+        great, making great memories unforgettable.
+      </p>
+
+      <Image src={milk} className="relative left-[48vw] bottom-[140px] w-1/4 aspect-square object-cover" alt=""/>
+      <Image src={hands} className="relative left-[26vw] bottom-[220px] w-1/4 aspect-square object-cover border-[15px] border-[#DFB08B]" alt=""/>
+
+      <p className="text-black w-[200px] text-2xl garamond absolute top-[135vh] right-20 xl:top-[90vh] xl:right-[15vw]">
+        Photography is an art form that should be accessible to all. That's why I offer personalized
+        sessions for corporate, family, couples, and portraits. I take the time to
+        understand your vision to create a unique experience. Browse my
+        portfolio and let's capture your special moments together!
+      </p>
+    </div>
+
+    {/* Small screen option */}
+    <div className="md:hidden">
+      <div className="bg-[#362417] text-white w-4/5 pt-5 m-auto">
+        <h3 className="yeseva text-2xl sm:text-3xl text-center">"Beyond the Frame"</h3>
+        <p className="garamond text-lg sm:text-xl p-5">
+          "Beyond the Frame" is my photography philosophy that goes beyond just capturing images.
+          It's about capturing the essence of the moment and telling that story through photographs.
+          It's about creating a connection with the moment and delivering photos that evoke emotions.
+        </p>
       </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      <Image src={milk} className="w-2/3 aspect-square mt-20 object-cover m-auto" alt=""/>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800 hover:dark:bg-opacity-30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      <p className="text-black w-full p-10 text-lg sm:text-xl garamond">
+      Attention to detail is critical in creating exceptional images that tell a story. I focus on every aspect of a scene, from lighting to composition, resulting in a lasting memory for clients. I'm a photographer who prioritizes the details to elevates images from good to great, making great memories unforgettable.
+      </p>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore the Next.js 13 playground.
-          </p>
-        </a>
+      <Image src={hands} className="w-2/3 aspect-square object-cover m-auto border-[16px] border-[#DFB08B]" alt=""/>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+      <p className="text-black w-full p-10 text-lg sm:text-xl garamond">
+      Photography is an art form that should be accessible to all. That's why I offer personalized photography services for corporate, family, couples, and portraits. I take the time to understand your vision to create a unique experience that exceeds expectations. Browse my portfolio and let's capture your special moments together!
+      </p>
+    </div>
+    </div>
+  );
 }
+
+export default Home;

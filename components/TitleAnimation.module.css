@@ -1,0 +1,66 @@
+.box {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 40px;
+    top: 50%;
+  }
+
+.normal, .hidden{
+  animation: 2.5s ease 1s 1 slide-n-show;
+  transition: 2s ease;
+  width: 0;
+  padding-left: 4%;
+  text-align: center;
+  animation-fill-mode: forwards;
+}
+
+.hidden, .smallLetters{
+  opacity: 0;
+  padding-left: 0;
+}
+
+.bigLetters{
+  animation: 2.5s ease 1s 1 slide-n-show-4-big-letters;
+  transition: 2s ease;
+  width: 0;
+  padding-left: 2.5%;
+  text-align: center;
+  animation-fill-mode: forwards;
+}
+
+.smallLetters, .normalSmall{
+  animation: 2.5s ease 1s 1 slide-n-show-4-small-letters;
+  transition: 2s ease;
+  width: 0;
+  padding-left: 2.5%;
+  text-align: center;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slide-n-show {
+  100% {
+    text-align: center;
+    width: 8%;
+    opacity: 100%;
+    padding-left: 0;
+  }
+}
+
+@keyframes slide-n-show-4-big-letters{
+  100% {
+    text-align: center;
+    width: 10%;
+    opacity: 100%;
+    padding-left: 0;
+  }
+}
+
+@keyframes slide-n-show-4-small-letters{
+  100% {
+    text-align: center;
+    width: 6%;
+    opacity: 100%;
+    padding-left: 0;
+  }
+}

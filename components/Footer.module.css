@@ -1,0 +1,28 @@
+.footer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: #362417;
+}
+
+.footer *{
+    color: white;
+    font-family: 'Yeseva One', cursive;
+    margin-bottom: 1%;
+    font-size:10px;
+}
+.link{
+    margin-inline: 8%;
+    height: 20px;
+}
+
+.title {
+    font-size:20px;
+    width: 100%;
+    text-align: center;
+}
+
+.email {
+    color:#F87666;
+}
