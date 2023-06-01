@@ -2,6 +2,6 @@
 const nextConfig = {}
 
 module.exports = {
-  basePath: '/shea',
-  assetPrefix: '/shea/',
+  basePath: '/shea/app',
+  assetPrefix: '/shea/app',
 };
