@@ -3,7 +3,7 @@
 import shea from '../../constants/vertImgs/shea.jpeg';
 import throne from '../../constants/vertImgs/throne.jpg';
 import active1 from '../../constants/vertImgs/active1.jpg';
-import { BrownBox } from "../components"
+import { BrownBox } from "../../components"
 import Image from 'next/image'
 
 const AboutMe = () => {

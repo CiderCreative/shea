@@ -8,9 +8,9 @@ export default function TopArea({title, line1, line2, line3, context=''}){
         <Slideshow context={context}/>
     </div>
 
-      <div className="md:absolute top-[300px] xl:top-[500px] md:pl-[65%] yeseva text-black text-center md:text-left">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl">{title}</h2>
-        <p className="text-lg sm:text-xl xl:text-2xl [&>*]:leading-[30px] md:[&>*]:leading-[50px] md:leading-[3vw]">
+      <div className="lg:absolute top-[30vh] xl:top-[40vh] 2xl:top-[500px] lg:pl-[65vw] 2xl:pl-[60vw] yeseva text-black text-center md:text-left space-y-5">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl text-center">{title}</h2>
+        <p className="text-center text-lg sm:text-xl xl:text-2xl [&>*]:leading-[30px] md:[&>*]:leading-[50px] md:leading-[3vw]">
           <div>{line1}</div>
           <div>{line2}</div>
           <div>{line3}</div>

@@ -13,7 +13,7 @@ const Business = () => {
         line1="All business? Let's talk!"
         line2="Get recurring customers"
         line3="via high quality content"
-        context={require.context(`../constants/businessImgs/`, false, /\.(png|jpe?g|svg)$/)}
+        context={require.context(`../../constants/businessImgs/`, false, /\.(png|jpe?g|svg)$/)}
       />
 
       <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-center py-20 pb-20 text-white yeseva px-5">What's included in a business shoot?</p>
