@@ -16,13 +16,13 @@ const Business = () => {
         context={require.context(`../../constants/businessImgs/`, false, /\.(png|jpe?g|svg)$/)}
       />
 
-      <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-center py-20 pb-20 text-white lg:yeseva px-5">What's included in a business shoot?</p>
+      <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-center py-20 pb-20 text-white yeseva px-5">What's included in a business shoot?</p>
 
     {/* Large screen pricing */}
     <div className="hidden md:grid xl:w-3/4 m-auto md:grid-cols-2 garamond text-white">
 
       <span className="py-10">
-        <p className="lg:yeseva text-4xl underline text-center">Individual Sessions</p>
+        <p className="yeseva text-4xl underline text-center">Individual Sessions</p>
         <p className="text-2xl mx-20 garamond">
           Great as a personalized and tailored source of content,
           showing off your brand’s essence. Check it out!
@@ -30,7 +30,7 @@ const Business = () => {
       </span>
 
       <span className="py-10">
-        <p className="lg:yeseva text-4xl underline text-center">Subscription Options</p>
+        <p className="yeseva text-4xl underline text-center">Subscription Options</p>
         <p className="text-2xl mx-20 garamond">
         Perfect as a consistent, reliable, and abundant source
         of content and advertisement. Look no further!
@@ -55,7 +55,7 @@ const Business = () => {
     {/* Small & medium screen pricing */}
     <div className="md:hidden w-full ">
       <span className="py-10 text-white">
-        <p className="lg:yeseva mb-2 text-3xl underline text-center">Individual Sessions</p>
+        <p className="yeseva mb-2 text-3xl underline text-center">Individual Sessions</p>
         <p className="text-xl sm:text-2xl mx-8 sm:mx-20 garamond pl-5">
           Great as a personalized and tailored source of content,
           showing off your brand’s essence. Check it out!
@@ -69,7 +69,7 @@ const Business = () => {
 
     <div className="md:hidden w-full">
       <span className="py-10 text-white">
-        <p className="mt-10 mb-2 lg:yeseva text-3xl underline text-center">Subscription Options</p>
+        <p className="mt-10 mb-2 yeseva text-3xl underline text-center">Subscription Options</p>
         <p className="text-xl sm:text-2xl mx-8 garamond pl-5">
         Perfect as a consistent, reliable, and abundant source
         of content and advertisement. Look no further!

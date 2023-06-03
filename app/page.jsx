@@ -16,7 +16,7 @@ const Home = () => {
       <div className="relative w-4/5 left-[50vw] top-20 pb-40">
         <Slideshow context={require.context(`../constants/homeImgs/`, false, /\.(png|jpe?g|svg)$/)}/>
       </div>
-      <div className="absolute top-[240px] left-[6vw] xl:top-[300px] xl:left-[10vw] 2xl:top-[400px] 2xl:left-[20vw] text-black lg:yeseva space-y-5">
+      <div className="absolute top-[240px] left-[6vw] xl:top-[300px] xl:left-[10vw] 2xl:top-[400px] 2xl:left-[20vw] text-black yeseva space-y-5">
         <p className="text-5xl xl:text-7xl">Take photos!</p>
         <p className="text-[35px] pb-10">They last a lifetime.</p>
         <a href="https://calendly.com/shealynphoto" target="_blank" rel="noreferrer">
@@ -30,7 +30,7 @@ const Home = () => {
       <div className="relative top-10 pb-[10vh]">
         <Slideshow />
       </div>
-      <div className="relative text-center text-black lg:yeseva pb-10">
+      <div className="relative text-center text-black yeseva pb-10">
         <p className="text-3xl sm:text-5xl sm:mt-[-20px]">Take photos!</p>
         <p className="text-xl sm:text-2xl py-5">They last a lifetime.</p>
         <a href="https://calendly.com/shealynphoto" target="_blank" rel="noreferrer">
@@ -44,7 +44,7 @@ const Home = () => {
     {/* Big Screen home screen (all absolute positioning) */}
     <div className="hidden lg:block mt-50">
       <div className="bg-[#362417] text-white w-1/2 pt-5 ml-10">
-        <h3 className="lg:yeseva text-4xl pl-4 text-center">"Beyond the Frame"</h3>
+        <h3 className="yeseva text-4xl pl-4 text-center">"Beyond the Frame"</h3>
         <p className="garamond text-2xl p-10">
           "Beyond the Frame" is my photography philosophy that goes beyond just capturing images.
           It's about capturing the essence of the moment and telling that story through photographs.
@@ -73,7 +73,7 @@ const Home = () => {
     {/* Small screen option */}
     <div className="lg:hidden">
       <div className="bg-[#362417] text-white w-4/5 pt-5 m-auto">
-        <h3 className="lg:yeseva text-2xl sm:text-3xl text-center">"Beyond the Frame"</h3>
+        <h3 className="yeseva text-2xl sm:text-3xl text-center">"Beyond the Frame"</h3>
         <p className="garamond text-lg sm:text-xl p-5">
           "Beyond the Frame" is my photography philosophy that goes beyond just capturing images.
           It's about capturing the essence of the moment and telling that story through photographs.
