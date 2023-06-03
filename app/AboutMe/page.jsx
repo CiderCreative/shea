@@ -13,7 +13,7 @@ const AboutMe = () => {
       {/* Large & XL Screen top */}
       <div className="hidden md:block">
         <Image src={shea} className="w-1/3 m-[6em] ml-40 aspect-square object-cover shadow-lg" alt="Shea, the photographer, in the sunshine."/>
-        <div className="absolute top-[270px] xl:top-[400px] pl-[50%] yeseva text-black text-center md:text-left">
+        <div className="absolute top-[270px] xl:top-[400px] pl-[50%] lg:yeseva text-black text-center md:text-left">
           <h2 className="text-6xl">About me!</h2>
           <p className="text-2xl leading-[40px] xl:leading-[50px]">
             <div>I love people.</div>
@@ -26,7 +26,7 @@ const AboutMe = () => {
       {/* Small & Medium top */}
       <div className="md:hidden">
         <Image src={shea} className="w-3/4 m-auto aspect-square object-cover shadow-lg" alt="Shea, the photographer, in the sunshine."/>
-        <div className="yeseva text-black text-center pt-5">
+        <div className="lg:yeseva text-black text-center pt-5">
           <h2 className="text-3xl md:text-6xl">About me!</h2>
           <p className="text-xl sm:text-2xl leading-[10vw] sm:leading-[5vw] garamond">
             <div>I love people.</div>

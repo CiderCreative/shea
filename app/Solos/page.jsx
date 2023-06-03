@@ -16,7 +16,7 @@ const Solos = () => {
         context={require.context(`../../constants/solosImgs/`, false, /\.(png|jpe?g|svg)$/)}
       />
 
-      <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-center py-[4rem] xs:py-[6rem] xl:py-20 yeseva">What's included in a solo portrait shoot?</p>
+      <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-center py-[4rem] xs:py-[6rem] xl:py-20 lg:lg:yeseva">What's included in a solo portrait shoot?</p>
 
       <div className="w-full hidden md:grid xl:w-3/4 m-auto grid-cols-2">
         {solos.map( element => {

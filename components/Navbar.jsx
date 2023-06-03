@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="flex items-center justify-between">
 
       {/* Link Div */}
-        <ul className="hidden lg:flex flex-row yeseva py-4 space-x-11 xl:space-x-20 pl-[30vw] relative text-lg">
+        <ul className="hidden lg:flex flex-row lg:lg:yeseva py-4 space-x-11 xl:space-x-20 pl-[30vw] relative text-lg">
           {links.map((link, i) => {
             if(link.title === "Shea Fortuna"){
               return (
@@ -32,7 +32,7 @@ const Navbar = () => {
             <svg className="relative w-6 h-6 m-2" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fillRule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path></svg>
         </button>
         {/**Hamburger Menu pop-out menu */}
-        <ul style={{display: (burgerClicked) ? 'flex' : 'none', flexDirection: 'column'}} className="absolute yeseva bg-[#362417] top-[60px] border-white border-1 p-10 rounded">
+        <ul style={{display: (burgerClicked) ? 'flex' : 'none', flexDirection: 'column'}} className="absolute lg:lg:yeseva bg-[#362417] top-[60px] border-white border-1 p-10 rounded">
           {
           links.map((link, i) => {
             if(link.title === "Shea Fortuna"){
@@ -51,7 +51,7 @@ const Navbar = () => {
         </ul>
 
         {/**Title for small screen */}
-        <Link href="/" className="lg:hidden md:px-9 md:py-3 mr-5 text-sm xs:text-xl md:text-3xl align-middle center yeseva text-center">Shea Fortuna</Link>
+        <Link href="/" className="lg:hidden md:px-9 md:py-3 mr-5 text-sm xs:text-xl md:text-3xl align-middle center lg:lg:yeseva text-center">Shea Fortuna</Link>
         {/* Book Button */}
         <a href="https://calendly.com/shealynphoto" target="_blank" rel="noreferrer">
           <button type="button" className="text-md px-6 xs:px-7 py-3 xs:py-2 top-5 right-5 mr-5 text-[10px] text-xs xs:text-xl lg:text-2xl flex-nowrap rounded red-button-gradient active:translate-y-1">Book Now</button>

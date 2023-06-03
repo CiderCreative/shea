@@ -17,7 +17,7 @@ export default function Couples() {
         line2="Engagements, Sessions, & More."
         context={require.context(`../../constants/couplesImgs/`, false, /\.(png|jpe?g|svg)$/)}      />
 
-      <p className="mx-5 text-2xl sm:text-4xl xl:text-5xl text-center py-10 xl:py-20 text-white yeseva">What's included in a couples photo shoot?</p>
+      <p className="mx-5 text-2xl sm:text-4xl xl:text-5xl text-center py-10 xl:py-20 text-white lg:yeseva">What's included in a couples photo shoot?</p>
 
       <div className="w-full hidden md:grid xl:w-3/4 m-auto grid-cols-2">
       {couples.map( element => {

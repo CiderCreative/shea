@@ -3,7 +3,7 @@ import { links } from '../constants/links'
 
 export default function Footer() {
   return (
-    <footer className="absolute inset-x-0 bottom-[auto] leading-10 pt-4 pb-5 yeseva bg-[#362417] text-white flex flex-wrap flex-col justify-items-center justify-center">
+    <footer className="absolute inset-x-0 bottom-[auto] leading-10 pt-4 pb-5 lg:yeseva bg-[#362417] text-white flex flex-wrap flex-col justify-items-center justify-center">
 
       <Link href="/" className="text-2xl pb-3 w-full text-center">Shea Fortuna</Link>
 

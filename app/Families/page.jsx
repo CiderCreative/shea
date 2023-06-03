@@ -28,7 +28,7 @@ const Families = () => {
 
       <Image src={fam} className="w-2/3 md:hidden border-4 border-white m-auto mt-20" alt="Sunny portrait of a happy family"/>
 
-      <p className="text-2xl sm:text-4xl xl:text-5xl text-center py-14 xl:py-20 px-5 yeseva">What’s included in a family shoot?</p>
+      <p className="text-2xl sm:text-4xl xl:text-5xl text-center py-14 xl:py-20 px-5 lg:yeseva">What’s included in a family shoot?</p>
 
       <div className="w-full xl:w-3/4 m-auto hidden md:grid grid-cols-2">
         {families.map( element => {
