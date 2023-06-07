@@ -15,7 +15,7 @@ export default function Slideshow({width = 600, context = require.context("../co
 
   const winWidth = useSlide();
   return (
-      <Carousel className={style.slideshow} showThumbs={false} autoPlay={true} width={(winWidth<1060) ? '100%' : '60%'} interval={3000} infiniteLoop={true} stopOnHover={true}>
+      <Carousel className={style.slideshow} showThumbs={false} autoPlay={true} width={(winWidth<1060) ? '100%' : '100%'} interval={3000} infiniteLoop={true} stopOnHover={true}>
         {images.map(imgLink => <Image src={imgLink} key={imgLink} alt="Slideshow showing example photography"/>)}
       </Carousel>)
 }
