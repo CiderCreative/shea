@@ -5,8 +5,8 @@
 **Commands**
 
 
-to build: COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build
+- to build: COMPOSE_DOCKER_CLI_BUILD=1 DOCKER_BUILDKIT=1 docker-compose build
 
-to run local: docker compose up
+- to run local: docker compose up
 
-(I came accross an issue where NestJS needed build first, to do that you just "npm run build")
+- (I came accross an issue where NestJS needed build first, to do that you just "npm run build")
