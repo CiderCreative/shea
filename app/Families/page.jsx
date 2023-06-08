@@ -14,8 +14,8 @@ const Families = () => {
 
       <TopArea
         title="Family"
-        line1="Capture sweet moments with"
-        line2="professional photos,"
+        line1="Capture sweet moments"
+        line2="with professional photos,"
         line3="so you never miss a detail!"
         context={require.context(`../../constants/familiesImgs/`, false, /\.(png|jpe?g|svg)$/)}
       />
