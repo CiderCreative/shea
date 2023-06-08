@@ -9,27 +9,22 @@ export default function Couples() {
   const refContainer = useRef();
 
   return (
-    <div ref={refContainer} className="pt-[80px] business-gradient">
+    <div ref={refContainer} className="pt-[80px]">
 
       <TopArea
         title="Couples"
         line1="Capture your love story!"
         line2="Engagements, Sessions, & More."
-        context={require.context(`../../constants/couplesImgs/`, false, /\.(png|jpe?g|svg)$/)}      />
+        context={require.context(`../../constants/couplesImgs/`, false, /\.(png|jpe?g|svg)$/)}
+      />
 
-      <p className="mx-5 text-2xl sm:text-4xl xl:text-5xl text-center py-10 xl:py-20 text-white lg:yeseva">What's included in a couples photo shoot?</p>
+      <p className="text-2xl sm:text-3xl lg:text-4xl text-center py-20 pb-20 text-black playfair px-5">What's included in a couples photo shoot?</p>
 
-      <div className="w-full hidden md:grid xl:w-3/4 m-auto grid-cols-2">
-      {couples.map( element => {
-        return(
-          <PriceBlock {...element}/>
-        );})}
-      </div>
-      <div className="w-full md:hidden">
-      {couples.map( element => {
-        return(
-          <PriceBlock {...element}/>
-        );})}
+      <div className="flex flex-col items-center sm:grid grid-cols-2 place-items-center xl:mx-[10vw] 2xl:mx-[15vw]">
+        {couples.map( element => {
+            return(
+              <PriceBlock {...element} color="#FF89A4"/>
+            );})}
       </div>
 
       <BrownBox

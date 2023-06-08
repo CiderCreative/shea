@@ -6,7 +6,7 @@ import { businessesNormal, businessesSubscription } from '../../constants/priceB
 
 const Business = () => {
   return (
-    <div className="pt-[80px] business-gradient">
+    <div className="pt-[80px]">
 
       <TopArea
         title="Business"
@@ -16,70 +16,26 @@ const Business = () => {
         context={require.context(`../../constants/businessImgs/`, false, /\.(png|jpe?g|svg)$/)}
       />
 
-      <p className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-center py-20 pb-20 text-white yeseva px-5">What's included in a business shoot?</p>
+      <p className="text-2xl sm:text-3xl lg:text-4xl text-center py-20 pb-20 text-black playfair px-5">What's included in a business shoot?</p>
 
-    {/* Large screen pricing */}
-    <div className="hidden md:grid xl:w-3/4 m-auto md:grid-cols-2 garamond text-white">
-
-      <span className="py-10">
-        <p className="yeseva text-4xl underline text-center">Individual Sessions</p>
-        <p className="text-2xl mx-20 garamond">
-          Great as a personalized and tailored source of content,
-          showing off your brand’s essence. Check it out!
-        </p>
-      </span>
-
-      <span className="py-10">
-        <p className="yeseva text-4xl underline text-center">Subscription Options</p>
-        <p className="text-2xl mx-20 garamond">
-        Perfect as a consistent, reliable, and abundant source
-        of content and advertisement. Look no further!
-        </p>
-      </span>
-
-      <div className="w-full">
-        {businessesNormal.map( element => {
-          return(
-            <PriceBlock {...element}/>
-        );})}
-      </div>
-        <div className="w-full col-span-1">
-          {businessesSubscription.map( element => {
-            return(
-              <PriceBlockSubscription {...element}/>
-            );})}
+      {/* Pricing Section */}
+      <div className="sm:grid grid-cols-2 text-black playfair xl:mx-[10vw] 2xl:mx-[15vw]">
+        {/* Column 1 */}
+        <div className="flex flex-col items-center">
+          <h3 className="playfair text-2xl sm:text-3xl lg:text-4xl text-center px-5 underline underline-offset-8 decoration-1">Individual Sessions</h3>
+          <p className="garamond text-md md:text-lg xl:text-xl mx-10 md:mx-20 lg:mx-40 mt-3 h-[100px] sm:mb-10">Great as a personalized and tailored source of content, showing off your brand’s essence. Check it out!</p>
+          {businessesNormal.map( element => {return( <PriceBlock {...element}/> );})}
         </div>
-    </div>
 
+        {/* Column 2 */}
+        <div className="flex flex-col items-center mt-20 sm:mt-0">
+          <h3 className="playfair text-2xl sm:text-3xl lg:text-4xl text-center px-5 underline underline-offset-8 decoration-1">Subscription Offers</h3>
+          <p className="garamond text-md md:text-lg xl:text-xl mx-10 md:mx-20 lg:mx-40 mt-3 h-[100px] sm:mb-10">Perfect as a consistent, reliable, and abundant source of content and advertisement. Look no further!</p>
+          {businessesSubscription.map( element => {return( <PriceBlockSubscription {...element}/> );})}
+        </div>
 
-    {/* Small & medium screen pricing */}
-    <div className="md:hidden w-full ">
-      <span className="py-10 text-white">
-        <p className="yeseva mb-2 text-3xl underline text-center">Individual Sessions</p>
-        <p className="text-xl sm:text-2xl mx-8 sm:mx-20 garamond pl-5">
-          Great as a personalized and tailored source of content,
-          showing off your brand’s essence. Check it out!
-        </p>
-      </span>
-      {businessesNormal.map( element => {
-        return(
-          <PriceBlock {...element}/>
-      );})}
-    </div>
-
-    <div className="md:hidden w-full">
-      <span className="py-10 text-white">
-        <p className="mt-10 mb-2 yeseva text-3xl underline text-center">Subscription Options</p>
-        <p className="text-xl sm:text-2xl mx-8 garamond pl-5">
-        Perfect as a consistent, reliable, and abundant source
-        of content and advertisement. Look no further!
-        </p>
-      </span>
-      {businessesSubscription.map( element => {
-        return(
-          <PriceBlockSubscription {...element}/>
-        );})}
-    </div>
+      </div>
+      {/* End of Pricing Section */}
 
       <BrownBox
         title="Marketing Philosophy"

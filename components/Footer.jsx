@@ -62,7 +62,7 @@ export default function Footer() {
           target="_blank"
           className="text-base xl:text-xl underline underline-offset-4"
         >
-          cidercreative.com
+          Cider Creative
         </Link>
       </div>
     </footer>

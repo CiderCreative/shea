@@ -6,6 +6,7 @@ import wedding from "../constants/couplesImgs/wedding.jpg"
 import blaze from "../constants/solosImgs/blaze.jpg"
 import feast from "../constants/businessImgs/feast.jpg"
 import Image from 'next/image';
+import Link from 'next/link'
 
 
 const Home = () => {
@@ -14,9 +15,17 @@ const Home = () => {
 
       {/* Hero */}
       <div className="flex flex-col sm:flex-row justify-center py-5 md:py-20">
-        <div className="text-center sm:text-left sm:flex flex-col justify-center sm:mr-[5vw] xl:mr-[7vw] my-5 text-black text-xl md:text-3xl 2xl:text-4xl playfair">
-          <h1 className="text-4xl lg:text-6xl">Take photos!</h1>
-          <h2 className="text-2xl lg:text-4xl">They last a lifetime.</h2>
+        <div className="text-center sm:text-left sm:flex flex-col justify-center sm:mr-[5vw] xl:mr-[7vw] my-5 text-black text-xl md:text-3xl 2xl:text-4xl playfair space-y-3">
+          <h1 className="text-4xl lg:text-6xl drop-shadow-md">Take photos!</h1>
+          <h2 className="text-2xl lg:text-4xl drop-shadow-md">They last a lifetime.</h2>
+        <div>
+          <Link
+            href="https://www.instagram.com/shealynphoto/"
+            target="_blank"
+            className="text-black bg-[#89D8C4] px-8 py-1 drop-shadow-md">
+              Get in touch
+          </Link>
+        </div>
         </div>
         <div className="m-auto sm:m-0 w-[70vw] sm:w-[60vw] md:w-[400px] lg:w-[500px]">
           <Slideshow context={require.context(`../constants/homeImgs/`, false, /\.(png|jpe?g|svg)$/)}/>

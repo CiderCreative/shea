@@ -48,6 +48,7 @@ const Navbar = () => {
         {/* Button => "Get in touch" (Large Screens +) */}
         <Link
           href="https://www.instagram.com/shealynphoto/"
+          type="button"
           target="_blank"
           className="hidden lg:inline text-black bg-[#F1EEE4] px-8 py-1">
             Get in touch
