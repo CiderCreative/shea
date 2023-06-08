@@ -32,8 +32,8 @@ export default function Footer() {
 
       {/* Left Column */}
       <div className="flex flex-col w-[200px] sm:w-[275px]">
-        <Link href="/" className="text-3xl">Shea Fortuna</Link>
-        <p>Invest in quality photography!</p>
+        <Link href="/" className="text-xl xl:text-3xl">Shea Fortuna</Link>
+        <p className="text-base lg:text-lg xl:text-xl">Invest in quality photography!</p>
       </div>
 
       {/* Middle Column */}
@@ -47,20 +47,20 @@ export default function Footer() {
 
       {/* Right Column */}
       <div className="w-[200px] sm:w-[275px]">
-        <h3 className="text-3xl">Email</h3>
+        <h3 className="text-xl xl:text-2xl">Email</h3>
         <p
-          className="underline underline-offset-4 hover:cursor-pointer"
+          className="text-base xl:text-xl underline underline-offset-4 hover:cursor-pointer"
           onClick={handleCopyToClipboard}
         >
           imagebyshea@gmail.com
         </p>
         <p className={`absolute transition-opacity duration-300 ${isCopied ? "opacity-100": "opacity-0 disabled"} bg-white text-black py-2 px-3 `}>Copied to clipboard</p>
 
-        <h3 className="text-3xl mt-10">Made & Maintained by</h3>
+        <h3 className="text-xl xl:text-2xl mt-10">Made & Maintained by</h3>
         <Link
           href="https://www.cidercreative.com/"
           target="_blank"
-          className="underline underline-offset-4"
+          className="text-base xl:text-xl underline underline-offset-4"
         >
           cidercreative.com
         </Link>

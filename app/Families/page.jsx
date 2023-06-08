@@ -2,9 +2,6 @@
 
 import PriceBlock from '../../components/PriceBlock';
 import { families } from '../../constants/priceBlockInfo';
-import child from '../../constants/familiesImgs/child.jpg';
-import fam from '../../constants/familiesImgs/fam.jpg';
-import dog from '../../constants/familiesImgs/dog.jpg';
 import { TopArea, BrownBox } from "../../components"
 import Image from 'next/image'
 
@@ -21,12 +18,8 @@ const Families = () => {
       />
 
       <div className="hidden md:grid grid-cols-3 w-full place-items-center m-auto">
-        <Image src={child}  className="my-10 w-2/3 border-4 border-white" alt="Happy family with daughter"/>
-        <Image src={dog}    className="my-10 w-2/3 border-4 border-white" alt="Modern portrait of man, woman, and dog"/>
-        <Image src={fam}    className="my-10 w-2/3 border-4 border-white" alt="Sunny portrait of a happy family"/>
       </div>
 
-      <Image src={fam} className="w-2/3 md:hidden border-4 border-white m-auto mt-20" alt="Sunny portrait of a happy family"/>
 
       <p className="text-2xl sm:text-4xl xl:text-5xl text-center py-14 xl:py-20 px-5 yeseva">What’s included in a family shoot?</p>
 

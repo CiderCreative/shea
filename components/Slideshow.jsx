@@ -7,7 +7,7 @@ import style from './Footer.module.css'
 import Image from 'next/image'
 
 
-export default function Slideshow({width = 600, context = require.context("../constants/horizImgs/", false, /\.(png|jpe?g|svg)$/)}){
+export default function Slideshow({width = 600, context = require.context("../constants/homeImgs/", false, /\.(png|jpe?g|svg)$/)}){
   function importAll(r) {
     return r.keys().map(r);
   }
