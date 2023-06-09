@@ -50,7 +50,7 @@ const Navbar = () => {
           href="https://www.instagram.com/shealynphoto/"
           type="button"
           target="_blank"
-          className="hidden lg:inline text-black bg-[#F1EEE4] px-8 py-1">
+          className="hidden lg:inline text-black bg-[#F1EEE4] px-8 py-1 transform transition-transform hover:scale-105 active:scale-90 duration-200 ease-in-out">
             Get in touch
         </Link>
 

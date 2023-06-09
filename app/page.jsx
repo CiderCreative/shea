@@ -2,9 +2,9 @@
 
 import './globals.css'
 import { Slideshow } from "../components"
-import wedding from "../constants/couplesImgs/wedding.jpg"
+import wedding from "../constants/couplesImgs/awedding.jpg"
 import blaze from "../constants/solosImgs/blaze.jpg"
-import feast from "../constants/businessImgs/feast.jpg"
+import feast from "../constants/businessImgs/afeast.jpg"
 import Image from 'next/image';
 import Link from 'next/link'
 
@@ -15,14 +15,14 @@ const Home = () => {
 
       {/* Hero */}
       <div className="flex flex-col sm:flex-row justify-center py-5 md:py-20">
-        <div className="text-center sm:text-left sm:flex flex-col justify-center sm:mr-[5vw] xl:mr-[7vw] my-5 text-black text-xl md:text-3xl 2xl:text-4xl playfair space-y-3">
-          <h1 className="text-4xl lg:text-6xl drop-shadow-md">Take photos!</h1>
-          <h2 className="text-2xl lg:text-4xl drop-shadow-md">They last a lifetime.</h2>
-        <div>
+        <div className="text-center sm:text-left sm:flex flex-col justify-center sm:mr-[5vw] xl:mr-[7vw] my-5 text-black text-xl md:text-3xl 2xl:text-4xl playfair">
+          <h1 className="text-4xl lg:text-6xl drop-shadow-xl my-2">Take photos!</h1>
+          <h2 className="text-2xl lg:text-4xl drop-shadow-xl">They last a lifetime.</h2>
+        <div className="transform transition-transform hover:scale-105 active:scale-90 duration-300 ease-in-out my-5">
           <Link
             href="https://www.instagram.com/shealynphoto/"
             target="_blank"
-            className="text-black bg-[#89D8C4] px-8 py-1 drop-shadow-md">
+            className="text-black bg-[#89D8C4] px-8 py-1 drop-shadow-xl">
               Get in touch
           </Link>
         </div>
@@ -34,7 +34,7 @@ const Home = () => {
       {/* End of Hero */}
 
 
-      <div className="flex flex-col sm:flex-row justify-center items-center mx-5 lg:mx-20 sm:space-x-10 lg:space-x-20 my-20">
+      <div className="flex flex-col sm:flex-row justify-center items-center mx-5 lg:mx-20 sm:space-x-10 lg:space-x-20 my-20 drop-shadow-xl">
         <Image src={ wedding } alt="" className="sm:w-[300px] lg:w-[500px]"/>
         <div className="order-first sm:order-last bg-[#89D8C4] py-8 px-10 xl:w-[1000px]">
           <h3 className="playfair text-2xl xl:text-4xl mb-5 underline underline-offset-8 decoration-1">Beyond the frame</h3>
@@ -45,9 +45,7 @@ const Home = () => {
           </p>
         </div>
       </div>
-
-
-      <div className="flex flex-col sm:flex-row justify-center items-center mx-5 lg:mx-20 sm:space-x-10 lg:space-x-20 my-20">
+      <div className="flex flex-col sm:flex-row justify-center items-center mx-5 lg:mx-20 sm:space-x-10 lg:space-x-20 my-20 drop-shadow-xl">
         <div className="bg-[#E89E63] py-8 px-10 xl:w-[1000px]">
           <h3 className="playfair text-2xl xl:text-4xl mb-5 underline underline-offset-8 decoration-1">Attention to detail</h3>
           <p className="garamond text-md md:text-lg xl:text-xl">
@@ -60,7 +58,7 @@ const Home = () => {
       </div>
 
 
-      <div className="flex flex-col sm:flex-row justify-center items-center mx-5 lg:mx-20 sm:space-x-10 lg:space-x-20 my-20">
+      <div className="flex flex-col sm:flex-row justify-center items-center mx-5 lg:mx-20 sm:space-x-10 lg:space-x-20 my-20 drop-shadow-xl">
         <Image src={ feast } alt="" className="sm:w-[300px] lg:w-[500px]"/>
         <div className="order-first sm:order-last bg-[#FF89A4] py-8 px-10 sm:w-[1000px]">
           <h3 className="playfair text-2xl xl:text-4xl mb-5 underline underline-offset-8 decoration-1">Personalized shoots</h3>

@@ -28,7 +28,7 @@ export default function Footer() {
 
 
   return (
-    <footer className="absolute inset-x-0 py-10 lg:px-20 bg-[#E89E63] text-white flex flex-col lg:flex-row items-center justify-between playfair text-xl space-y-10 [&>*]:drop">
+    <footer className="absolute inset-x-0 pt-10 pb-20 lg:px-20 bg-[#E89E63] text-white flex flex-col lg:flex-row items-center justify-between playfair text-xl space-y-10 [&>*]:drop">
 
       {/* Left Column */}
       <div className="flex flex-col w-[200px] sm:w-[275px]">

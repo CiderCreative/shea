@@ -16,18 +16,19 @@ const Business = () => {
         context={require.context(`../../constants/businessImgs/`, false, /\.(png|jpe?g|svg)$/)}
       />
 
-      <p className="text-2xl sm:text-3xl lg:text-4xl text-center py-20 pb-20 text-black playfair px-5">What's included in a business shoot?</p>
+      <p className="text-2xl sm:text-3xl lg:text-4xl text-center py-20 pb-20 text-black playfair px-5 drop-shadow-xl">What's included in a business shoot?</p>
 
       {/* Pricing Section */}
-      <div className="sm:grid grid-cols-2 text-black playfair xl:mx-[10vw] 2xl:mx-[15vw]">
-        {/* Column 1 */}
+      <div className="sm:grid grid-cols-2 text-black playfair xl:mx-[10vw] 2xl:mx-[15vw] overflow-hidden drop-shadow-xl">
+
+        {/* Column 1 (Individual Sessions)*/}
         <div className="flex flex-col items-center">
           <h3 className="playfair text-2xl sm:text-3xl lg:text-4xl text-center px-5 underline underline-offset-8 decoration-1">Individual Sessions</h3>
           <p className="garamond text-md md:text-lg xl:text-xl mx-10 md:mx-20 lg:mx-40 mt-3 h-[100px] sm:mb-10">Great as a personalized and tailored source of content, showing off your brand’s essence. Check it out!</p>
           {businessesNormal.map( element => {return( <PriceBlock {...element}/> );})}
         </div>
 
-        {/* Column 2 */}
+        {/* Column 2 (Subscription)*/}
         <div className="flex flex-col items-center mt-20 sm:mt-0">
           <h3 className="playfair text-2xl sm:text-3xl lg:text-4xl text-center px-5 underline underline-offset-8 decoration-1">Subscription Offers</h3>
           <p className="garamond text-md md:text-lg xl:text-xl mx-10 md:mx-20 lg:mx-40 mt-3 h-[100px] sm:mb-10">Perfect as a consistent, reliable, and abundant source of content and advertisement. Look no further!</p>
