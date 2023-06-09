@@ -1,23 +1,70 @@
+"use client"
+
 import Link from 'next/link'
-import { links } from '../constants/links'
+import { useState, useEffect } from 'react';
 
 export default function Footer() {
+  const [isCopied, setIsCopied] = useState(false);
+
+  useEffect(() => {
+    if (isCopied) {
+      const timer = setTimeout(() => {
+        setIsCopied(false);
+      }, 2000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [isCopied]);
+
+  const handleCopyToClipboard = () => {
+    navigator.clipboard.writeText('imagebyshea@gmail.com')
+    .then( () => {
+      setIsCopied(true);
+    })
+    .catch((error) => {
+      console.error('Error copying to clipboard:', error);
+    });
+  };
+
+
   return (
-    <footer className="absolute inset-x-0 bottom-[auto] leading-10 pt-4 pb-5 yeseva bg-[#362417] text-white flex flex-wrap flex-col justify-items-center justify-center">
+    <footer className="absolute inset-x-0 pt-10 pb-20 lg:px-20 bg-[#E89E63] text-white flex flex-col lg:flex-row items-center justify-between playfair text-xl space-y-10 [&>*]:drop">
 
-      <Link href="/" className="text-2xl pb-3 w-full text-center">Shea Fortuna</Link>
-
-      <div className="text-center text-xs sm:text-lg w-full">
-        {links.map((link,i) => {
-          if(link.title === "Shea Fortuna"){return <div key={i+20}/>}
-          return <Link href={link.id} className="mx-2 sm:mx-10 xl:mx-20 hover:text-gray-500 " key={i+20}>{link.title}</Link>
-        })}
+      {/* Left Column */}
+      <div className="flex flex-col w-[200px] sm:w-[275px]">
+        <Link href="/" className="text-xl xl:text-3xl">Shea Fortuna</Link>
+        <p className="text-base lg:text-lg xl:text-xl">Invest in quality photography!</p>
       </div>
 
-      <p className="mt-3 text-center text-[12px]">
-        imagebyshea@gmail.com
-      </p>
+      {/* Middle Column */}
+      <ul className="hidden md:flex space-x-10 lg:space-x-0 lg:flex-col lg:space-y-5 [&>*]:underline underline-offset-4 decoration-dotted">
+        <Link href="/Business">business </Link>
+        <Link href="/Solos"   >solos    </Link>
+        <Link href="/Couples" >couples  </Link>
+        <Link href="/Families">families </Link>
+        <Link href="/AboutMe" >about me </Link>
+      </ul>
 
+      {/* Right Column */}
+      <div className="w-[200px] sm:w-[275px]">
+        <h3 className="text-xl xl:text-2xl">Email</h3>
+        <p
+          className="text-base xl:text-xl underline underline-offset-4 hover:cursor-pointer"
+          onClick={handleCopyToClipboard}
+        >
+          imagebyshea@gmail.com
+        </p>
+        <p className={`absolute transition-opacity duration-300 ${isCopied ? "opacity-100": "opacity-0 disabled"} bg-white text-black py-2 px-3 `}>Copied to clipboard</p>
+
+        <h3 className="text-xl xl:text-2xl mt-10">Made & Maintained by</h3>
+        <Link
+          href="https://www.cidercreative.com/"
+          target="_blank"
+          className="text-base xl:text-xl underline underline-offset-4"
+        >
+          Cider Creative
+        </Link>
+      </div>
     </footer>
     );
 }

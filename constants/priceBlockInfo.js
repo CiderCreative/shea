@@ -5,12 +5,14 @@ export const couples = [
     {time: "2-HOUR", cost: 300, numPhotos:'50', timeRange:"2 weeks"}
 ]
 
-export const solos = [
-    {time: "30-MINUTE", cost: 120, numPhotos:'20', timeRange:"2 days"},
-    {time: "1-HOUR", cost: 150, numPhotos:'30', timeRange:"3 days"},
-    {time: "1.5-HOUR", cost: 200, numPhotos:'40', timeRange:"5 days"},
-    {time: "2-HOUR", cost: 300, numPhotos:'60', timeRange:"1 week"},
-]
+// Written inline for special styling :)
+// export const solos = [
+//     {time: "30-MINUTE", cost: 120, numPhotos:'20', timeRange:"2 days"},
+//     {time: "1-HOUR", cost: 150, numPhotos:'30', timeRange:"3 days"},
+//     {time: "1.5-HOUR", cost: 200, numPhotos:'40', timeRange:"5 days"},
+//     {time: "2-HOUR", cost: 300, numPhotos:'60', timeRange:"1 week"},
+// ]
+
 export const families = [
     {time: "30-MINUTE", cost: 200, numPhotos:'30', timeRange:"2 days"},
     {time: "1-HOUR", cost: 250, numPhotos:'40', timeRange:"3 days"},

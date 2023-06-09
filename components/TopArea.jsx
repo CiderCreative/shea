@@ -2,19 +2,16 @@ import Slideshow from './Slideshow';
 
 export default function TopArea({title, line1, line2, line3, context=''}){
   return(
-
-    <div>
-      <div className="m-5 md:mx-40 md:my-[8vh] md:w-2/3">
+    <div className="sm:flex justify-center py-5 md:py-20">
+      <div className="m-auto sm:m-0 w-[70vw] sm:w-[55vw] md:w-[400px] lg:w-[500px]">
         <Slideshow context={context}/>
-    </div>
+      </div>
 
-      <div className="lg:absolute top-[30vh] xl:top-[40vh] 2xl:top-[500px] lg:pl-[65vw] 2xl:pl-[60vw] yeseva text-black text-center md:text-left space-y-5">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl 2xl:text-7xl text-center">{title}</h2>
-        <p className="text-center text-lg sm:text-xl xl:text-2xl [&>*]:leading-[30px] md:[&>*]:leading-[50px] md:leading-[3vw]">
-          <div>{line1}</div>
-          <div>{line2}</div>
-          <div>{line3}</div>
-        </p>
+      <div className="text-center sm:text-left sm:flex flex-col justify-center sm:ml-[3vw] md:pl-[5vw] mt-5 xl:ml-[7vw] text-black text-xl md:text-2xl lg:text-3xl 2xl:text-4xl drop-shadow-xl">
+        <div className="text-3xl md:text-5xl 2xl:text-6xl">{title}</div>
+        <div>{line1}</div>
+        <div>{line2}</div>
+        <div>{line3}</div>
       </div>
     </div>
   );
