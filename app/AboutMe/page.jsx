@@ -36,10 +36,10 @@ const AboutMe = () => {
       {/* Top Area */}
       <div className="sm:flex justify-center py-5 md:pt-20 lg:pb-40">
         <div className="m-auto sm:m-0 w-[70vw] sm:w-[60vw] md:w-[400px] lg:w-[500px]">
-          <Image src={hat} alt="" className="aspect-square object-cover"/>
+          <Image src={hat} alt="" className="aspect-square object-cover drop-shadow-xl"/>
         </div>
 
-        <div className="text-center sm:text-left sm:flex flex-col justify-center sm:ml-[5vw] mt-5 xl:ml-[7vw] text-black text-xl md:text-3xl 2xl:text-4xl">
+        <div className="text-center sm:text-left sm:flex flex-col justify-center sm:ml-[5vw] mt-5 xl:ml-[7vw] text-black text-xl md:text-3xl 2xl:text-4xl drop-shadow-xl">
           <div className="text-3xl md:text-5xl 2xl:text-6xl">About me!</div>
           <div>I love people.</div>
           <div>I love creating.</div>
@@ -48,7 +48,7 @@ const AboutMe = () => {
       </div>
 
       <div className="lg:grid grid-cols-2 items-center my-20 2xl:mx-[15vw]">
-        <div className="[&>*]:my-5 mx-20 text-md sm:text-lg lg:text-xl ">
+        <div className="[&>*]:my-5 mx-20 text-md sm:text-lg lg:text-xl drop-shadow-xl">
           <p>Ever since I was little, I loved snapping photos of plants, bugs, stars, sports...whatever was in front of me! Unfortunately, the busyness of life got in the way and my camera was sold.</p>
           <p>Years later, when I got in behind of a camera again, something sparked, reigniting that childhood passion and sense of wonder. I got a camera again and was back snapping photos!</p>
           <Image src={field} alt="" className="lg:hidden aspect-square w-[60vw] my-10 object-cover m-auto"/>
@@ -66,7 +66,7 @@ const AboutMe = () => {
         </p>
 
         </div>
-        <Image src={field} alt="" className="hidden lg:block aspect-square my-10 w-[500px] object-cover m-auto"/>
+        <Image src={field} alt="" className="hidden lg:block aspect-square my-10 w-[500px] object-cover m-auto drop-shadow-xl"/>
       </div>
 
     </div>
