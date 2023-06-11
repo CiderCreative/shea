@@ -14,8 +14,8 @@ const Contact = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const [shootDescription, setShootDescription] = useState('');
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
     // Perform any other necessary form submission logic here
 
@@ -41,6 +41,26 @@ const Contact = () => {
     }
 
     setIsSubmitted(true);
+    
+    const message = {
+      email: 'lintbraden@gmail.com', 
+      subject: 'Contact Info from SheaFortuna.com', 
+      message: `Name: ${name}\nEmail: ${email}\nInstagram: ${instagram}\nSelected Option: ${selectedOption}\nShoot Description: ${shootDescription}`
+    }
+
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(message)
+    })
+
+    if(await response.status !== 200) {
+      alert('There was an error sending your message. Please try again later.')
+      console.log(await response.json())
+    }
+
     // Log all variables
     console.log('name:', name);
     console.log('email:', email);
