@@ -56,14 +56,11 @@ const AboutMe = () => {
           <p>If you’re looking for a photographer who is passionate about capturing the moment, I would be honored to work with you! I would love to help you capture important moments in time. Please don’t hesitate to contact
             me to discuss your photography needs! Let’s create something beautiful together!
           </p>
-          <p className="pb-5">Email me at<p
-          className="underline underline-offset-4 hover:cursor-pointer"
-          onClick={handleCopyToClipboard}
-        >
-          imagebyshea@gmail.com
-        </p>
-        <p className={`absolute transition-opacity duration-300 ${isCopied ? "opacity-100": "opacity-0 disabled"} bg-[#E89E63] text-white py-2 px-3 `}>Copied to clipboard</p>
-        </p>
+          <div className="transform hover:scale-105 active:scale-95 duration-200 bg-[#89D8C4] px-8 py-1 text-center w-[175px]">
+            <Link href="/Contact" className="text-black w-[100%]">
+                Get in touch
+            </Link>
+          </div>
 
         </div>
         <Image src={field} alt="" className="hidden lg:block aspect-square my-10 w-[500px] object-cover m-auto drop-shadow-xl"/>
