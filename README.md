@@ -10,3 +10,7 @@
 - to run local: docker compose up
 
 - (I came accross an issue where NestJS needed build first, to do that you just "npm run build")
+
+**Setup emailing**
+
+- make .env.local file with vars GMAIL_EMAIL_ADDRESS and GMAIL_APP_PASSWORD for sending emails
