@@ -11,7 +11,7 @@ export default function BrownBox({title, desc, button="Book a Shoot!", color="#4
       {/* Button */}
       <div className="text-center mt-7 mb-2 sm:mb-0 drop-shadow-md transform transition-transform hover:scale-105 active:scale-90 duration-200 ease-in-out">
         <Link
-        href="https://www.instagram.com/shealynphoto/" target="_blank"
+        href="/Contact"
         className="text-black bg-[#F1EEE4] px-4 sm:px-8 py-2 drop-shadow-md text-xl garamond"
         >
           {button}

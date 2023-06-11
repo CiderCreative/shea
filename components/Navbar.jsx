@@ -47,9 +47,8 @@ const Navbar = () => {
 
         {/* Button => "Get in touch" (Large Screens +) */}
         <Link
-          href="https://www.instagram.com/shealynphoto/"
+          href="/Contact"
           type="button"
-          target="_blank"
           className="hidden lg:inline text-black bg-[#F1EEE4] px-8 py-1 transform transition-transform hover:scale-105 active:scale-90 duration-200 ease-in-out">
             Get in touch
         </Link>
@@ -66,7 +65,7 @@ const Navbar = () => {
       {/* Drop-Down Links (Mobile & Tablet) */}
       <ul
         ref={dropdownMenuRef}
-        className={`fixed lg:hidden top-[55px] md:top-[65px] left-[5px] space-y-9 p-10 bg-[#E89E63] text-md transition-transform duration-300 ease-in-out transform flex flex-col ${burgerClicked ? "translate-x-0" : "-translate-x-96 disabled"
+        className={`fixed lg:hidden top-[55px] md:top-[65px] left-[5px] space-y-9 p-10 bg-[#E89E63] drop-shadow-xl text-base sm:text-md transition-transform duration-300 ease-in-out transform flex flex-col ${burgerClicked ? "translate-x-0" : "-translate-x-96 disabled"
           }`}
       >
         <Link href="/Business"  onClick={() =>  setBurgerClicked(false)}>business</Link>

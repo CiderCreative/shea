@@ -20,8 +20,7 @@ const Home = () => {
           <h2 className="text-2xl lg:text-4xl drop-shadow-xl">They last a lifetime.</h2>
         <div className="transform transition-transform hover:scale-105 active:scale-90 duration-300 ease-in-out my-5">
           <Link
-            href="https://www.instagram.com/shealynphoto/"
-            target="_blank"
+            href="/Contact"
             className="text-black bg-[#89D8C4] px-8 py-1 drop-shadow-xl">
               Get in touch
           </Link>

@@ -15,7 +15,6 @@ const Business = () => {
         line3="via high quality content"
         context={require.context(`../../constants/businessImgs/`, false, /\.(png|jpe?g|svg)$/)}
       />
-
       <p className="text-2xl sm:text-3xl lg:text-4xl text-center py-20 pb-20 text-black playfair px-5 drop-shadow-xl">What's included in a business shoot?</p>
 
       {/* Pricing Section */}

@@ -28,12 +28,17 @@ export default function Footer() {
 
 
   return (
-    <footer className="absolute inset-x-0 pt-10 pb-20 lg:px-20 bg-[#E89E63] text-white flex flex-col lg:flex-row items-center justify-between playfair text-xl space-y-10 [&>*]:drop">
+    <footer className="absolute inset-x-0 pt-10 pb-20 lg:px-20 bg-[#E89E63] text-white flex flex-col lg:flex-row items-center justify-between playfair text-xl space-y-10 lg:space-y-0 [&>*]:drop">
 
       {/* Left Column */}
       <div className="flex flex-col w-[200px] sm:w-[275px]">
-        <Link href="/" className="text-xl xl:text-3xl">Shea Fortuna</Link>
+        <Link href="/" className="text-xl xl:text-2xl">Shea Fortuna</Link>
         <p className="text-base lg:text-lg xl:text-xl">Invest in quality photography!</p>
+
+        <h3 className="text-xl xl:text-2xl mt-10">Made & Maintained by</h3>
+        <Link href="https://www.cidercreative.com/" target="_blank" className="text-base xl:text-xl underline underline-offset-4">
+          Cider Creative
+        </Link>
       </div>
 
       {/* Middle Column */}
@@ -43,11 +48,17 @@ export default function Footer() {
         <Link href="/Couples" >couples  </Link>
         <Link href="/Families">families </Link>
         <Link href="/AboutMe" >about me </Link>
+        <Link href="/Contact" >contact </Link>
       </ul>
 
       {/* Right Column */}
       <div className="w-[200px] sm:w-[275px]">
-        <h3 className="text-xl xl:text-2xl">Email</h3>
+        <h3 className="text-xl xl:text-2xl">Instagram</h3>
+        <Link href="https://www.instagram.com/shealynphoto/" target="_blank" className="text-base xl:text-xl underline underline-offset-4">
+          @shealynphoto
+        </Link>
+
+        <h3 className="text-xl xl:text-2xl mt-10">Email</h3>
         <p
           className="text-base xl:text-xl underline underline-offset-4 hover:cursor-pointer"
           onClick={handleCopyToClipboard}
@@ -55,15 +66,6 @@ export default function Footer() {
           imagebyshea@gmail.com
         </p>
         <p className={`absolute transition-opacity duration-300 ${isCopied ? "opacity-100": "opacity-0 disabled"} bg-white text-black py-2 px-3 `}>Copied to clipboard</p>
-
-        <h3 className="text-xl xl:text-2xl mt-10">Made & Maintained by</h3>
-        <Link
-          href="https://www.cidercreative.com/"
-          target="_blank"
-          className="text-base xl:text-xl underline underline-offset-4"
-        >
-          Cider Creative
-        </Link>
       </div>
     </footer>
     );
